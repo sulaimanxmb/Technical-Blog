@@ -1,3 +1,55 @@
 @use "./variables.scss" as *;
 
-// put your custom CSS here!
+// Cupertino Aesthetic Tweaks
+.page {
+  background-color: var(--light);
+}
+
+// Rounded corners and subtle shadows for cards/elements
+.popover, .callout, pre, .search-container, .explorer-container {
+  border-radius: 12px !important;
+  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04) !important;
+  border: 1px solid var(--lightgray) !important;
+}
+
+img {
+  border-radius: 12px;
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
+}
+
+// Graph Hidden by Default Logic
+.graph {
+  display: none; // Hidden by default
+}
+
+.graph.show-graph {
+  display: block; // Toggled via JS
+  animation: fade-in 0.3s ease-out;
+}
+
+.view-graph-btn {
+  display: block;
+  width: 100%;
+  padding: 10px 16px;
+  margin-top: 20px;
+  background: var(--secondary);
+  color: #fff;
+  border: none;
+  border-radius: 8px;
+  font-family: var(--headerFont);
+  font-weight: 600;
+  cursor: pointer;
+  text-align: center;
+  transition: all 0.2s ease;
+  
+  &:hover {
+    background: var(--tertiary);
+    transform: translateY(-1px);
+    box-shadow: 0 4px 12px rgba(0, 122, 255, 0.2);
+  }
+}
+
+@keyframes fade-in {
+  from { opacity: 0; transform: translateY(5px); }
+  to { opacity: 1; transform: translateY(0); }
+}
