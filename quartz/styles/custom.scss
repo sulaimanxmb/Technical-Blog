@@ -1,15 +1,80 @@
 @use "./variables.scss" as *;
 
-// Cupertino Aesthetic Tweaks
-.page {
+// ==========================================
+// TRUE APPLE CUPERTINO AESTHETIC REDESIGN
+// ==========================================
+
+body, .page {
   background-color: var(--light);
 }
 
-// Rounded corners and subtle shadows for cards/elements
+// Main Content Card (The biggest Apple vibe factor)
+.center {
+  background-color: #ffffff;
+  padding: 3rem 4rem !important;
+  border-radius: 24px;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.04);
+  margin-top: 2rem !important;
+  margin-bottom: 2rem !important;
+  border: 1px solid rgba(0,0,0,0.02);
+  transition: background-color 0.3s ease;
+  
+  @media all and (max-width: 800px) {
+    padding: 2rem 1.5rem !important;
+    border-radius: 0;
+    box-shadow: none;
+    margin-top: 0 !important;
+    border: none;
+  }
+}
+
+// Dark mode overrides for the center card
+html[saved-theme="dark"] .center {
+  background-color: #1e1e1e;
+  box-shadow: 0 10px 40px rgba(0, 0, 0, 0.2);
+  border: 1px solid rgba(255,255,255,0.05);
+}
+
+// Typography Improvements (Apple feel)
+h1, h2, h3, h4, h5, h6 {
+  letter-spacing: -0.02em; // Tighter tracking for headers
+  font-weight: 700;
+}
+
+h1 {
+  font-size: 2.2rem;
+}
+
+// Links (Clean Apple Blue, no ugly highlights)
+a.internal, a.external {
+  color: #0066cc !important;
+  background-color: transparent !important;
+  font-weight: 500;
+  text-decoration: none !important;
+  
+  &:hover {
+    text-decoration: underline !important;
+  }
+}
+
+html[saved-theme="dark"] a.internal, html[saved-theme="dark"] a.external {
+  color: #4da6ff !important;
+}
+
+// Elements & Components
 .popover, .callout, pre, .search-container, .explorer-container {
   border-radius: 12px !important;
-  box-shadow: 0 4px 24px rgba(0, 0, 0, 0.04) !important;
+  box-shadow: 0 4px 20px rgba(0, 0, 0, 0.03) !important;
   border: 1px solid var(--lightgray) !important;
+  background-color: #ffffff;
+}
+
+html[saved-theme="dark"] .popover, 
+html[saved-theme="dark"] .callout, 
+html[saved-theme="dark"] pre, 
+html[saved-theme="dark"] .search-container, 
+html[saved-theme="dark"] .explorer-container {
+  background-color: #2a2a2a;
 }
 
 img {
@@ -17,7 +82,9 @@ img {
   box-shadow: 0 4px 12px rgba(0, 0, 0, 0.06);
 }
 
-// Graph Hidden by Default Logic
+// ==========================================
+// GRAPH HIDDEN LOGIC & BUTTON
+// ==========================================
 .graph {
   display: none; // Hidden by default
 }
@@ -25,27 +92,41 @@ img {
 .graph.show-graph {
   display: block; // Toggled via JS
   animation: fade-in 0.3s ease-out;
+  margin-top: 1rem;
 }
 
+// Apple Pill Button
 .view-graph-btn {
   display: block;
   width: 100%;
-  padding: 10px 16px;
-  margin-top: 20px;
-  background: var(--secondary);
+  padding: 12px 20px;
+  margin-top: 10px;
+  background: #007aff; // Apple Blue
   color: #fff;
   border: none;
-  border-radius: 8px;
+  border-radius: 999px; // Pill shape
   font-family: var(--headerFont);
   font-weight: 600;
+  font-size: 0.9rem;
+  letter-spacing: -0.01em;
   cursor: pointer;
   text-align: center;
   transition: all 0.2s ease;
+  box-shadow: 0 4px 14px rgba(0, 122, 255, 0.25);
   
   &:hover {
-    background: var(--tertiary);
-    transform: translateY(-1px);
-    box-shadow: 0 4px 12px rgba(0, 122, 255, 0.2);
+    background: #005bb5;
+    transform: scale(0.98);
+    box-shadow: 0 2px 8px rgba(0, 122, 255, 0.2);
+  }
+}
+
+html[saved-theme="dark"] .view-graph-btn {
+  background: #0a84ff;
+  box-shadow: 0 4px 14px rgba(10, 132, 255, 0.2);
+  
+  &:hover {
+    background: #006ce6;
   }
 }
 
