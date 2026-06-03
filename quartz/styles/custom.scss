@@ -27,7 +27,8 @@ h1 { font-size: 2.5rem !important; }
 
 // The interactive graph container (Retro Window style)
 .graph {
-  display: block !important;
+  display: flex !important;
+  flex-direction: column;
   border: 4px solid var(--dark) !important;
   border-radius: 8px !important;
   background: var(--light) !important;
@@ -36,31 +37,67 @@ h1 { font-size: 2.5rem !important; }
   position: relative;
   overflow: hidden;
   margin-top: 1rem;
+  transition: all 0.3s ease;
   
-  // Fake window header
-  &::before {
-    content: "INTERACTIVE DEV ECOSYSTEM";
-    display: block;
+  &.graph-closed {
+    .graph-outer {
+      display: none !important;
+    }
+  }
+
+  &.graph-fullscreen {
+    position: fixed !important;
+    top: 50% !important;
+    left: 50% !important;
+    transform: translate(-50%, -50%) !important;
+    width: 90vw !important;
+    height: 90vh !important;
+    z-index: 9999 !important;
+    margin: 0 !important;
+    
+    .graph-outer, .graph-container {
+      height: 100% !important;
+      flex: 1;
+    }
+  }
+
+  .retro-window-header {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
     background: var(--light);
     border-bottom: 4px solid var(--dark);
     padding: 8px 16px;
-    font-weight: 900;
-    font-size: 1rem;
-    font-family: var(--headerFont);
-    color: var(--dark);
-  }
-  
-  // Fake window buttons (Red, Yellow, Green boxes)
-  &::after {
-    content: "";
-    position: absolute;
-    top: 10px;
-    right: 16px;
-    width: 14px;
-    height: 14px;
-    background: #ff4747;
-    border: 3px solid var(--dark);
-    box-shadow: -24px 0 0 #ffd100, -48px 0 0 #00e000;
+    
+    .title {
+      font-weight: 900;
+      font-size: 1rem;
+      font-family: var(--headerFont);
+      color: var(--dark);
+    }
+
+    .window-controls {
+      display: flex;
+      gap: 8px;
+      
+      button {
+        width: 14px;
+        height: 14px;
+        border: 3px solid var(--dark);
+        padding: 0;
+        cursor: pointer;
+        border-radius: 0;
+        transition: transform 0.1s;
+        
+        &:hover {
+          transform: scale(1.1);
+        }
+        
+        &.btn-close { background: #ff4747; }
+        &.btn-minimize { background: #ffd100; }
+        &.btn-full { background: #00e000; }
+      }
+    }
   }
 }
 

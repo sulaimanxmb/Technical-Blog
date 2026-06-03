@@ -69,8 +69,15 @@ export default ((userOpts?: Partial<GraphOptions>) => {
     const globalGraph = { ...defaultOptions.globalGraph, ...userOpts?.globalGraph };
 
     return (
-      <div class={classNames(displayClass, "graph")}>
-        <h3>{i18n(cfg.locale ?? "en-US").components.graph.title}</h3>
+      <div class={classNames(displayClass, "graph")} id="interactive-graph-container">
+        <div class="retro-window-header">
+          <span class="title">INTERACTIVE DEV ECOSYSTEM</span>
+          <div class="window-controls">
+            <button class="btn-close" aria-label="Close" id="btn-graph-close"></button>
+            <button class="btn-minimize" aria-label="Minimize" id="btn-graph-min"></button>
+            <button class="btn-full" aria-label="Fullscreen" id="btn-graph-full"></button>
+          </div>
+        </div>
         <div class="graph-outer">
           <div class="graph-container" data-cfg={JSON.stringify(localGraph)}></div>
           <button class="global-graph-icon" aria-label="Global Graph">

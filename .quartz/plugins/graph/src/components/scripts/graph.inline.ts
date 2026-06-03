@@ -804,5 +804,27 @@ import {
       }
     }
     document.addEventListener("themechange", handleThemeChange);
+
+    document.addEventListener("nav", function() {
+      var graphContainer = document.getElementById("interactive-graph-container");
+      var btnClose = document.getElementById("btn-graph-close");
+      var btnMin = document.getElementById("btn-graph-min");
+      var btnFull = document.getElementById("btn-graph-full");
+
+      if (graphContainer && btnClose && btnMin && btnFull) {
+        btnClose.addEventListener("click", function() {
+          graphContainer.classList.remove("graph-fullscreen");
+          graphContainer.classList.add("graph-closed");
+        });
+        btnMin.addEventListener("click", function() {
+          graphContainer.classList.remove("graph-fullscreen");
+          graphContainer.classList.remove("graph-closed");
+        });
+        btnFull.addEventListener("click", function() {
+          graphContainer.classList.remove("graph-closed");
+          graphContainer.classList.add("graph-fullscreen");
+        });
+      }
+    });
   }
 })();
