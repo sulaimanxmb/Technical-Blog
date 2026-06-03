@@ -131,8 +131,9 @@ a.internal.tag-link {
   }
 }
 
-// Force full visibility on all sidebars (remove Quartz default fading)
+// Force full visibility on all sidebars (remove Quartz default fading) and move up
 .sidebar {
+  padding-top: 1rem !important; // Reduce the large empty space at the top
   * {
     opacity: 1 !important;
   }

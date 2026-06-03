@@ -182,7 +182,7 @@ plugins:
     enabled: true
     layout:
       position: beforeBody
-      priority: 5
+      priority: 1
       condition: not-index
   - source: github:quartz-community/comments
     enabled: false
