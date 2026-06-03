@@ -124,7 +124,7 @@ export default (() => {
                 const header = document.createElement("div");
                 header.className = "retro-window-header";
                 header.innerHTML = ' \\
-                  <span class="title">INTERACTIVE DEV ECOSYSTEM</span> \\
+                  <span class="title">${i18n(cfg.locale).components.graph.title}</span> \\
                   <div class="window-controls"> \\
                     <button class="btn-close" aria-label="Close" id="btn-graph-close"></button> \\
                     <button class="btn-minimize" aria-label="Minimize" id="btn-graph-min"></button> \\
