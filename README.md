@@ -1,17 +1,74 @@
-# Quartz v5
+<div align="center">
+  
+# Sulaiman's Technical Blog & Digital Garden
 
-> “[One] who works with the door open gets all kinds of interruptions, but [they] also occasionally gets clues as to what the world is and what might be important.” — Richard Hamming
+[![Website](https://img.shields.io/badge/Website-Live-00E000?style=for-the-badge&logo=vercel)](https://sulaimanxmb-blog.vercel.app)
+[![Built with Quartz](https://img.shields.io/badge/Built_with-Quartz-5A0FC8?style=for-the-badge)](https://quartz.jzhao.xyz/)
+[![TypeScript](https://img.shields.io/badge/TypeScript-007ACC?style=for-the-badge&logo=typescript&logoColor=white)](https://www.typescriptlang.org/)
+[![License: MIT](https://img.shields.io/badge/License-MIT-yellow.svg?style=for-the-badge)](https://opensource.org/licenses/MIT)
 
-Quartz is a set of tools that helps you publish your [digital garden](https://jzhao.xyz/posts/networked-thought) and notes as a website for free.
+*An interactive, interconnected knowledge base documenting my journey through Software Engineering, DevOps, and Cybersecurity.*
 
-🔗 Read the documentation and get started: https://quartz.jzhao.xyz/
+**[Read the Blog →](https://sulaimanxmb-blog.vercel.app)**
 
-[Join the Discord Community](https://discord.gg/cRFFHYye7t)
+</div>
 
-## Sponsors
+---
 
-<p align="center">
-  <a href="https://github.com/sponsors/jackyzha0">
-    <img src="https://cdn.jsdelivr.net/gh/jackyzha0/jackyzha0/sponsorkit/sponsors.svg" />
-  </a>
-</p>
+## 📖 About This Repository
+
+This repository holds the source code and Markdown notes for my personal technical blog and digital garden. Unlike a traditional chronological blog, this site is built as a highly interconnected web of knowledge, allowing readers to explore topics non-linearly.
+
+It features a custom **Neo-Brutalist** UI design with an interactive dependency graph that visually maps out how different technical concepts connect to one another.
+
+### 🌐 Live Site
+You can access the live version of the blog here: **[https://sulaimanxmb-blog.vercel.app](https://sulaimanxmb-blog.vercel.app)**
+
+## 🧠 Topics Covered
+
+The notes and articles within this digital garden primarily focus on:
+
+- **Cybersecurity:** Bug Bounty Methodologies, Web Vulnerabilities (XSS, SQLi, SSRF), Penetration Testing, and OSINT.
+- **DevOps & Cloud:** CI/CD Pipelines, Docker, Jenkins, and Amazon Web Services (AWS) infrastructure.
+- **Linux & Systems:** Advanced Linux configurations, process/storage management, and shell scripting.
+- **Software Engineering:** Data structures, AI model analysis, and development best practices.
+
+## 🛠️ Technical Stack
+
+This project is built using **[Quartz v5](https://quartz.jzhao.xyz/)**, a fast, React-based digital garden generator.
+
+- **Framework:** React / TypeScript
+- **Styling:** Custom SCSS (Neo-Brutalist Aesthetic)
+- **Content:** Obsidian-flavored Markdown
+- **Deployment:** Vercel (CI/CD)
+- **Key Features:** Interactive Architecture Graph, Full-text Search, Tagging System, Light/Dark Mode.
+
+## 🚀 Local Development
+
+If you'd like to run this blog locally to inspect the architecture:
+
+1. **Clone the repository:**
+   ```bash
+   git clone https://github.com/sulaimanxmb/Technical-Blog.git
+   cd Technical-Blog
+   ```
+
+2. **Install dependencies:**
+   ```bash
+   npm install
+   ```
+
+3. **Run the local development server:**
+   ```bash
+   npx quartz build --serve
+   ```
+
+4. Open `http://localhost:8080` in your browser.
+
+## 🤝 Connect With Me
+
+- **GitHub:** [@sulaimanxmb](https://github.com/sulaimanxmb)
+- **Website:** [sulaimanxmb-blog.vercel.app](https://sulaimanxmb-blog.vercel.app)
+
+---
+*Generated and maintained with ❤️ by Sulaiman Eksambi.*
