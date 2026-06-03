@@ -101,11 +101,23 @@ h1 { font-size: 2.5rem !important; }
 }
 
 // Cards, Callouts, and code blocks
-.popover, .callout, pre, .search-container, .explorer-container {
+.popover, .callout, .search-container, .explorer-container {
   border-radius: 0 !important;
   border: 4px solid var(--dark) !important;
   box-shadow: 6px 6px 0px var(--dark) !important;
   background-color: var(--light) !important;
+  transition: transform 0.1s ease, box-shadow 0.1s ease;
+  
+  &:hover {
+    transform: translate(2px, 2px);
+    box-shadow: 4px 4px 0px var(--dark) !important;
+  }
+}
+
+pre {
+  border-radius: 0 !important;
+  border: 4px solid var(--dark) !important;
+  box-shadow: 6px 6px 0px var(--dark) !important;
   transition: transform 0.1s ease, box-shadow 0.1s ease;
   
   &:hover {
