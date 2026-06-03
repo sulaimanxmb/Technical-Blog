@@ -39,7 +39,7 @@ export default {
       createdWith: "Created with",
     },
     graph: {
-      title: "INTERACTIVE DEV ECOSYSTEM",
+      title: "INTERACTIVE GRAPH VIEW",
     },
     recentNotes: {
       title: "Recent Notes",
