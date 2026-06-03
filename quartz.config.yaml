@@ -17,19 +17,19 @@ configuration:
     cdnCaching: true
     typography:
       header: Inter
-      body: Inter
-      code: IBM Plex Mono
+      body: Roboto Mono
+      code: Roboto Mono
     colors:
       lightMode:
-        light: "#f5f5f7"
-        lightgray: "#e5e5ea"
-        gray: "#8e8e93"
-        darkgray: "#1c1c1e"
+        light: "#ffffff"
+        lightgray: "#000000"
+        gray: "#000000"
+        darkgray: "#000000"
         dark: "#000000"
-        secondary: "#007aff"
-        tertiary: "#5ac8fa"
-        highlight: "rgba(0, 122, 255, 0.15)"
-        textHighlight: "#fff23688"
+        secondary: "#0055ff"
+        tertiary: "#fff000"
+        highlight: "rgba(0, 85, 255, 0.15)"
+        textHighlight: "#fff00088"
       darkMode:
         light: "#161618"
         lightgray: "#393639"
@@ -131,8 +131,8 @@ plugins:
   - source: github:quartz-community/graph
     enabled: true
     layout:
-      position: right
-      priority: 10
+      position: beforeBody
+      priority: 5
   - source: github:quartz-community/search
     enabled: true
     layout:
