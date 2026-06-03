@@ -131,6 +131,13 @@ a.internal.tag-link {
   }
 }
 
+// Force full visibility on all sidebars (remove Quartz default fading)
+.sidebar {
+  * {
+    opacity: 1 !important;
+  }
+}
+
 // Regular links
 a.internal {
   background-color: transparent !important;
