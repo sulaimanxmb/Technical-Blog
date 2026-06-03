@@ -128,7 +128,6 @@ export default (() => {
                   <div class="window-controls"> \\
                     <button class="btn-close" aria-label="Close" id="btn-graph-close"></button> \\
                     <button class="btn-minimize" aria-label="Minimize" id="btn-graph-min"></button> \\
-                    <button class="btn-full" aria-label="Fullscreen" id="btn-graph-full"></button> \\
                   </div> \\
                 ';
                 
@@ -136,9 +135,8 @@ export default (() => {
 
                 const btnClose = document.getElementById("btn-graph-close");
                 const btnMin = document.getElementById("btn-graph-min");
-                const btnFull = document.getElementById("btn-graph-full");
 
-                if (btnClose && btnMin && btnFull) {
+                if (btnClose && btnMin) {
                   btnClose.addEventListener("click", () => {
                     graphOuter.classList.remove("graph-fullscreen");
                     graphOuter.classList.add("graph-closed");
@@ -147,11 +145,6 @@ export default (() => {
                   btnMin.addEventListener("click", () => {
                     graphOuter.classList.remove("graph-fullscreen");
                     graphOuter.classList.remove("graph-closed");
-                  });
-                  
-                  btnFull.addEventListener("click", () => {
-                    graphOuter.classList.remove("graph-closed");
-                    graphOuter.classList.add("graph-fullscreen");
                   });
                 }
               }
