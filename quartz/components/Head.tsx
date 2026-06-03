@@ -106,6 +106,58 @@ export default (() => {
             return resource
           }
         })}
+        <script dangerouslySetInnerHTML={{
+          __html: `
+            if (!localStorage.getItem("theme")) {
+              localStorage.setItem("theme", "light");
+              document.documentElement.setAttribute("saved-theme", "light");
+            }
+
+            document.addEventListener("nav", () => {
+              const graphOuter = document.querySelector(".graph");
+              if (graphOuter && !graphOuter.querySelector(".retro-window-header")) {
+                const h3 = graphOuter.querySelector("h3");
+                if (h3) {
+                  h3.style.display = "none";
+                }
+                
+                const header = document.createElement("div");
+                header.className = "retro-window-header";
+                header.innerHTML = ' \\
+                  <span class="title">INTERACTIVE DEV ECOSYSTEM</span> \\
+                  <div class="window-controls"> \\
+                    <button class="btn-close" aria-label="Close" id="btn-graph-close"></button> \\
+                    <button class="btn-minimize" aria-label="Minimize" id="btn-graph-min"></button> \\
+                    <button class="btn-full" aria-label="Fullscreen" id="btn-graph-full"></button> \\
+                  </div> \\
+                ';
+                
+                graphOuter.insertBefore(header, graphOuter.firstChild);
+
+                const btnClose = document.getElementById("btn-graph-close");
+                const btnMin = document.getElementById("btn-graph-min");
+                const btnFull = document.getElementById("btn-graph-full");
+
+                if (btnClose && btnMin && btnFull) {
+                  btnClose.addEventListener("click", () => {
+                    graphOuter.classList.remove("graph-fullscreen");
+                    graphOuter.classList.add("graph-closed");
+                  });
+                  
+                  btnMin.addEventListener("click", () => {
+                    graphOuter.classList.remove("graph-fullscreen");
+                    graphOuter.classList.remove("graph-closed");
+                  });
+                  
+                  btnFull.addEventListener("click", () => {
+                    graphOuter.classList.remove("graph-closed");
+                    graphOuter.classList.add("graph-fullscreen");
+                  });
+                }
+              }
+            });
+          `
+        }} />
       </head>
     )
   }

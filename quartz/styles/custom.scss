@@ -170,10 +170,15 @@ a.internal.tag-link {
 
 // Force full visibility on all sidebars (remove Quartz default fading) and move up
 .sidebar {
-  padding-top: 1rem !important; // Reduce the large empty space at the top
+  padding-top: 1rem !important;
   * {
     opacity: 1 !important;
   }
+}
+
+.page > #quartz-body .center {
+  padding-top: 0 !important;
+  margin-top: 0 !important;
 }
 
 // Regular links
