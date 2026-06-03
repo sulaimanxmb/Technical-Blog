@@ -71,4 +71,3 @@ If you'd like to run this blog locally to inspect the architecture:
 - **Website:** [sulaimanxmb-blog.vercel.app](https://sulaimanxmb-blog.vercel.app)
 
 ---
-*Generated and maintained with ❤️ by Sulaiman Eksambi.*
