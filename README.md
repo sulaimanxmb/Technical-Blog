@@ -1,6 +1,6 @@
 <div align="center">
   
-# Sulaiman's Technical Blog & Digital Garden
+# My Technical Blog & Digital Garden
 
 [![Website](https://img.shields.io/badge/Website-Live-00E000?style=for-the-badge&logo=vercel)](https://sulaimanxmb-blog.vercel.app)
 [![Built with Quartz](https://img.shields.io/badge/Built_with-Quartz-5A0FC8?style=for-the-badge)](https://quartz.jzhao.xyz/)
