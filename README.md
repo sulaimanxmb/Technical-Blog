@@ -67,7 +67,7 @@ If you'd like to run this blog locally to inspect the architecture:
 
 ## 🤝 Connect With Me
 
-- **GitHub:** [@sulaimanxmb](https://github.com/sulaimanxmb)
-- **Website:** [sulaimanxmb-blog.vercel.app](https://sulaimanxmb-blog.vercel.app)
+- **Email:** [sulaimaneksambi@gmail.com](mailto:sulaimaneksambi@gmail.com)
+- **Website:** [sulaimanxmb-blog.vercel.app](https://sulaimanxmb-portfolio.vercel.app)
 
 ---
