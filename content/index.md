@@ -17,7 +17,7 @@ This is inspired by [Building a Second Brain Podcast](https://www.buildingasecon
 
 4. [[MacOS Config]]
 
-5. [[AI related]]
+5. [[Prompt Engineering]]
 
 6. [[Pointers]]
 
